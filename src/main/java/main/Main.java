@@ -13,7 +13,7 @@ public class Main {
                 LocalDateTime.now().plusDays(2L),seller,0,null);
 
 
-        AuctionService auctionService = new AuctionService();
+        AuctionService auctionService = AuctionService.getInstance();
         Customer customer1 = new Customer("Anna Kowalik");
         auctionService.bid(auction,customer1,20);
         auctionNotifier.registerObserver(customer1);
